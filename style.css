@@ -1,0 +1,64 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    height: 300px;
+}
+
+.header-image {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.header-content {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+h1, nav a {
+    color: white;
+}
+h1{
+    font-size: 70px;
+}
+
+nav a{
+    font-size: 20px;
+}
+
+.search-bar {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 280px;
+}
+
+input {
+    width: 342px;
+    height: 38px;
+    border-radius: 5px;
+    border: solid 1px grey;
+    cursor: pointer;
+}
+
+button {
+    width: 120px;
+    height: 38px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: solid 1px grey;
+    background-color: #F9FAFB;
+}
