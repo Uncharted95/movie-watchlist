@@ -3,6 +3,10 @@ html, body {
     padding: 0;
 }
 
+body{
+    font-family: "Roboto", sans-serif;
+}
+
 header {
     position: relative;
     height: 300px;
@@ -14,6 +18,7 @@ header {
     height: 300px;
     object-fit: cover;
     object-position: center;
+    filter: brightness(0.5);
 }
 
 .header-content {
@@ -31,7 +36,7 @@ h1, nav a {
     color: white;
 }
 h1{
-    font-size: 70px;
+    font-size: 50px;
 }
 
 nav a{
@@ -47,18 +52,63 @@ nav a{
 }
 
 input {
-    width: 342px;
+    width: 442px;
     height: 38px;
     border-radius: 5px;
     border: solid 1px grey;
-    cursor: pointer;
 }
 
 button {
-    width: 120px;
+    width: 150px;
     height: 38px;
     cursor: pointer;
     border-radius: 5px;
     border: solid 1px grey;
     background-color: #F9FAFB;
+}
+
+.film-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.film-site-text{
+    margin-right: 12px;
+    color: #8a8a8a;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.watch-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.watch-paragraph{
+    font-size: 30px;
+    color: #8a8a8a;
+}
+
+.add-movies{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: #363636;
+}
+
+.watch-content{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.add{
+    height: 30px;
+
 }
