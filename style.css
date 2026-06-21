@@ -82,6 +82,11 @@ button {
     margin-left: 10px;
 }
 
+.film{
+    width: 550px;
+    height: 2000px;
+}
+
 .watch-text{
     display: flex;
     flex-direction: column;
