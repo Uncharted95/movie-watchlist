@@ -1,5 +1,6 @@
 const btn = document.getElementById("button")
 let films = document.getElementById("films")
+const filmIcon = document.querySelector('.film-icon')
 
 async function movieTitles(){
     const movieTitle = document.querySelector('input[type="search"]').value
@@ -17,20 +18,30 @@ let html = ""
 
 movies.forEach(movie => {
     html += `
-        <div class="film">
-            <img src="${movie.Poster}" class="poster">
-            <div class="text-container">
-                <h3>${movie.Title}</h3>
-                <p>${movie.imdbRating}</p>
-                <p>${movie.Runtime}</p>
-                <p>${movie.Genre}</p>
-                <p>${movie.Plot}</p>
+            <div class="film">
+                <img src="${movie.Poster}" class="poster">
+                <div class="text-container">
+                    <div class="title-row">
+                        <h3>${movie.Title}</h3>
+                        <p>${movie.imdbRating}</p>
+                    </div>
+                    <div class="info-row">
+                        <p>${movie.Runtime}</p>
+                        <p>${movie.Genre}</p>
+                    </div>
+                    <p>${movie.Plot}</p>
+                </div>
             </div>
-        </div>
-    `
+            `
 })
 
-films.innerHTML = html
+if(data.Response === "True") {
+    filmIcon.style.display = "none"
+    films.innerHTML = html
+} else {
+    filmIcon.style.display = "flex"
+    films.innerHTML = ""
+}
 
 }
 

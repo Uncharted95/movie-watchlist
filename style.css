@@ -113,11 +113,18 @@ button {
 
 }
 
-.films{
+.film{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.films{
+    display: flex;
+    flex-direction: column;
     max-width: 100vh;
-    margin: 0 auto;
+    margin: 50px auto 0;
     gap: 20px;
 }
 
@@ -127,6 +134,31 @@ button {
 }
 
 .text-container{
+    display: flex;
     flex-direction: column;
+}
+
+.text-container h3,
+.text-container p {
+    margin: 10;
+}
+
+.text-container p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.title-row p{
+    align-items: center;
+    font-size: 18px;
+}
+
+.title-row, .info-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.info-row{
+    gap: 12px;
 }
 
