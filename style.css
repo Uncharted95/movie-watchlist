@@ -131,6 +131,7 @@ button {
 .poster{
     width: 99px;
     height: 147.41px;
+    object-fit: cover;
 }
 
 .text-container{
@@ -162,3 +163,44 @@ button {
     gap: 12px;
 }
 
+hr {
+    border: none;
+    border-top: 1px solid black;
+    width: 100%
+}
+
+.watchlist-btn-icon{
+    border: none;
+    background: none;
+    padding: 0;
+    width: fit-content;
+}
+.add2{
+    height: 15px;
+}
+
+.watchlist-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.watchlist-btn p {
+    margin: 0;
+}
+
+#not-found{
+    display: none;
+}
+
+.not-found {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.not-found p {
+    font-size: 20px;
+    color: #8a8a8a;
+}
