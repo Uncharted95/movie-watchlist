@@ -109,8 +109,12 @@ button {
 }
 
 .add{
-    height: 30px;
+    height: 20px;
 
+}
+
+.delete{
+    height: 20px;
 }
 
 .film{
@@ -175,9 +179,6 @@ hr {
     padding: 0;
     width: fit-content;
 }
-.add2{
-    height: 15px;
-}
 
 .watchlist-btn {
     display: flex;
@@ -203,4 +204,19 @@ hr {
 .not-found p {
     font-size: 20px;
     color: #8a8a8a;
+}
+
+.watch-listed-films{
+    display: flex;
+    flex-direction: column;
+    max-width: 100vh;
+    margin: 50px auto 0;
+    gap: 20px;
+}
+
+.delete-btn-icon{
+    border: none;
+    background: none;
+    padding: 0;
+    width: fit-content;
 }

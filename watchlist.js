@@ -1,7 +1,10 @@
-const watchlist = JSON.parse(localStorage.getItem('watchlist')) || []
 let watchlistedFilms = document.getElementById("watch-listed-films")
+const watchText = document.getElementById("watch-text")
 
-let html = ""
+
+function renderWatchlist(){
+    const watchlist = JSON.parse(localStorage.getItem('watchlist')) || []
+    let html = ""
 
 watchlist.forEach(movie => {
         html += `
@@ -16,8 +19,8 @@ watchlist.forEach(movie => {
                             <p>${movie.Runtime}</p>
                             <p>${movie.Genre}</p>
                             <div class="watchlist-btn">
-                            <button class="watchlist-btn-icon" onclick="addToWatchList('${movie.imdbID}')">
-                            <img class="add add2" src="images/add.png">
+                            <button class="delete-btn-icon" onclick="deleteFromWatchlist('${movie.imdbID}')">
+                            <img class="delete" src="images/delete.png">
                             </button>
                                 <p class="watchlist">Watchlist</p>
                             </div>
@@ -30,4 +33,22 @@ watchlist.forEach(movie => {
     })
 
 
-watchlistedFilms.innerHTML = html
+if(watchlist.length > 0) {
+    watchlistedFilms.innerHTML = html
+    watchText.style.display = "none"
+} else {
+    watchText.style.display = "flex"
+    watchlistedFilms.innerHTML = ""
+}
+}
+
+
+function deleteFromWatchlist(id){
+    console.log("deleting", id)
+    const watchlist = JSON.parse(localStorage.getItem('watchlist')) || []
+    const updatedWatchlist = watchlist.filter(movie => movie.imdbID !== id)
+    localStorage.setItem('watchlist', JSON.stringify(updatedWatchlist))
+    renderWatchlist()
+}
+
+renderWatchlist()
