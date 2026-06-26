@@ -14,6 +14,7 @@ watchlist.forEach(movie => {
                         <div class="title-row">
                             <h3>${movie.Title}</h3>
                             <p>${movie.imdbRating}</p>
+                            <img src="/images/star.png" class="rating">
                         </div>
                         <div class="info-row">
                             <p>${movie.Runtime}</p>

@@ -154,13 +154,14 @@ button {
 
 
 .title-row p{
-    align-items: center;
     font-size: 18px;
+    margin-right: 5px;
 }
 
 .title-row, .info-row{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .info-row{
@@ -219,4 +220,8 @@ hr {
     background: none;
     padding: 0;
     width: fit-content;
+}
+
+.rating{
+    height: 20px;
 }
